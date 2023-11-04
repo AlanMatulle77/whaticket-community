@@ -20,6 +20,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 
 import MainListItems from "./MainListItems";
 import NotificationsPopOver from "../components/NotificationsPopOver";
+import ChatNotificationsPopOver from "../components/ChatInterno";
+
 import UserModal from "../components/UserModal";
 import { AuthContext } from "../context/Auth/AuthContext";
 import BackdropLoading from "../components/BackdropLoading";
@@ -36,18 +38,25 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
   },
   toolbarIcon: {
     display: "flex",
-    alignItems: "center",
     justifyContent: "flex-end",
     padding: "0 8px",
     minHeight: "48px",
+   // backgroundColor: "#017afe",
+   // color: "white",
+  },
+  imagem: {
+    float: "left",
+    marginRight: "40px",
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: "#017afe",
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -177,6 +186,13 @@ const LoggedInLayout = ({ children }) => {
         open={drawerOpen}
       >
         <div className={classes.toolbarIcon}>
+          <img
+            src="https://phpugv.pyperbot.com.br/logo2.jpeg"
+            alt="Image from the internet"
+            width="100"
+            height="56"
+            className={classes.imagem}
+          />
           <IconButton onClick={() => setDrawerOpen(!drawerOpen)}>
             <ChevronLeftIcon />
           </IconButton>
@@ -195,7 +211,6 @@ const LoggedInLayout = ({ children }) => {
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, drawerOpen && classes.appBarShift)}
-        color={process.env.NODE_ENV === "development" ? "inherit" : "primary"}
       >
         <Toolbar variant="dense" className={classes.toolbar}>
           <IconButton
@@ -217,9 +232,9 @@ const LoggedInLayout = ({ children }) => {
             noWrap
             className={classes.title}
           >
-            WhaTicket
           </Typography>
           {user.id && <NotificationsPopOver />}
+
 
           <div>
             <IconButton

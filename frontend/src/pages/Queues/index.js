@@ -188,6 +188,15 @@ const Queues = () => {
           >
             {i18n.t("queues.buttons.add")}
           </Button>
+          <a href="https://appsantosanjos1.pyperbot.com.br/horariosetor/" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="contained"
+              color="secondary"
+            >
+              {"Definir Horários de Indisponibilidade"}
+            </Button>
+          </a>
+
         </MainHeaderButtonsWrapper>
       </MainHeader>
       <Paper className={classes.mainPaper} variant="outlined">
@@ -199,9 +208,6 @@ const Queues = () => {
               </TableCell>
               <TableCell align="center">
                 {i18n.t("queues.table.color")}
-              </TableCell>
-              <TableCell align="center">
-                {i18n.t("queues.table.greeting")}
               </TableCell>
               <TableCell align="center">
                 {i18n.t("queues.table.actions")}
@@ -223,17 +229,6 @@ const Queues = () => {
                           alignSelf: "center",
                         }}
                       />
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">
-                    <div className={classes.customTableCell}>
-                      <Typography
-                        style={{ width: 300, align: "center" }}
-                        noWrap
-                        variant="body2"
-                      >
-                        {queue.greetingMessage}
-                      </Typography>
                     </div>
                   </TableCell>
                   <TableCell align="center">

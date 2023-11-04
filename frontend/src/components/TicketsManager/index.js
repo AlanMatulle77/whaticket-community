@@ -109,7 +109,7 @@ const TicketsManager = () => {
   const [selectedQueueIds, setSelectedQueueIds] = useState(userQueueIds || []);
 
   useEffect(() => {
-    if (user.profile.toUpperCase() === "ADMIN") {
+    if (user.profile.toUpperCase() === "ADMIN" || user.profile.toUpperCase() === "SUPERADMIN" ) {
       setShowAllTickets(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -62,7 +62,6 @@ const WhatsAppModal = ({ open, onClose, whatsAppId }) => {
 	const initialState = {
 		name: "",
 		greetingMessage: "",
-		farewellMessage: "",
 		isDefault: false,
 	};
 	const [whatsApp, setWhatsApp] = useState(initialState);
@@ -159,42 +158,10 @@ const WhatsAppModal = ({ open, onClose, whatsAppId }) => {
 									/>
 								</div>
 								<div>
-									<Field
-										as={TextField}
-										label={i18n.t("queueModal.form.greetingMessage")}
-										type="greetingMessage"
-										multiline
-										rows={5}
-										fullWidth
-										name="greetingMessage"
-										error={
-											touched.greetingMessage && Boolean(errors.greetingMessage)
-										}
-										helperText={
-											touched.greetingMessage && errors.greetingMessage
-										}
-										variant="outlined"
-										margin="dense"
-									/>
+						
 								</div>
 								<div>
-									<Field
-										as={TextField}
-										label={i18n.t("whatsappModal.form.farewellMessage")}
-										type="farewellMessage"
-										multiline
-										rows={5}
-										fullWidth
-										name="farewellMessage"
-										error={
-											touched.farewellMessage && Boolean(errors.farewellMessage)
-										}
-										helperText={
-											touched.farewellMessage && errors.farewellMessage
-										}
-										variant="outlined"
-										margin="dense"
-									/>
+				
 								</div>
 								<QueueSelect
 									selectedQueueIds={selectedQueueIds}

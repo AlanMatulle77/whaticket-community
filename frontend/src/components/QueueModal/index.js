@@ -194,24 +194,7 @@ const QueueModal = ({ open, onClose, queueId }) => {
 									}}
 								/>
 								<div>
-									<Field
-										as={TextField}
-										label={i18n.t("queueModal.form.greetingMessage")}
-										type="greetingMessage"
-										multiline
-										inputRef={greetingRef}
-										rows={5}
-										fullWidth
-										name="greetingMessage"
-										error={
-											touched.greetingMessage && Boolean(errors.greetingMessage)
-										}
-										helperText={
-											touched.greetingMessage && errors.greetingMessage
-										}
-										variant="outlined"
-										margin="dense"
-									/>
+						
 								</div>
 							</DialogContent>
 							<DialogActions>

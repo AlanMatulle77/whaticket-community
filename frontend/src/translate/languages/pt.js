@@ -222,11 +222,11 @@ const messages = {
       },
       ticketsManager: {
         buttons: {
-          newTicket: "Novo",
+          newTicket: "Novo Atendimento",
         },
       },
       ticketsQueueSelect: {
-        placeholder: "Filas",
+        placeholder: "Setores",
       },
       tickets: {
         toasts: {
@@ -237,8 +237,8 @@ const messages = {
         },
         tabs: {
           open: { title: "Inbox" },
-          closed: { title: "Resolvidos" },
-          search: { title: "Busca" },
+          closed: { title: "Historico" },
+          search: { title: "Pesquisar" },
         },
         search: {
           placeholder: "Buscar tickets e mensagens",
@@ -284,12 +284,12 @@ const messages = {
         listItems: {
           dashboard: "Dashboard",
           connections: "Conexões",
-          tickets: "Tickets",
+          tickets: "Atendimentos",
           contacts: "Contatos",
           quickAnswers: "Respostas Rápidas",
-          queues: "Filas",
+          queues: "Setores",
           administration: "Administração",
-          users: "Usuários",
+          users: "Colaboradores",
           settings: "Configurações",
         },
         appBar: {
@@ -303,7 +303,7 @@ const messages = {
         noTickets: "Nenhuma notificação.",
       },
       queues: {
-        title: "Filas",
+        title: "Setores",
         table: {
           name: "Nome",
           color: "Cor",
@@ -320,7 +320,7 @@ const messages = {
         },
       },
       queueSelect: {
-        inputLabel: "Filas",
+        inputLabel: "Setores",
       },
       quickAnswers: {
         title: "Respostas Rápidas",

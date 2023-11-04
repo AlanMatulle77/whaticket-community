@@ -40,12 +40,13 @@ const TicketActionButtons = ({ ticket }) => {
 		setAnchorEl(null);
 	};
 
-	const handleUpdateTicketStatus = async (e, status, userId) => {
+	const handleUpdateTicketStatus = async (e, status, userId, fintik) => {
 		setLoading(true);
 		try {
 			await api.put(`/tickets/${ticket.id}`, {
 				status: status,
 				userId: userId || null,
+				fintik: fintik,
 			});
 
 			setLoading(false);
@@ -67,7 +68,7 @@ const TicketActionButtons = ({ ticket }) => {
 					loading={loading}
 					startIcon={<Replay />}
 					size="small"
-					onClick={e => handleUpdateTicketStatus(e, "open", user?.id)}
+					onClick={e => handleUpdateTicketStatus(e, "open", user?.id, "N")}
 				>
 					{i18n.t("messagesList.header.buttons.reopen")}
 				</ButtonWithSpinner>
@@ -78,7 +79,7 @@ const TicketActionButtons = ({ ticket }) => {
 						loading={loading}
 						startIcon={<Replay />}
 						size="small"
-						onClick={e => handleUpdateTicketStatus(e, "pending", null)}
+						onClick={e => handleUpdateTicketStatus(e, "pending", null, "N")}
 					>
 						{i18n.t("messagesList.header.buttons.return")}
 					</ButtonWithSpinner>
@@ -87,7 +88,7 @@ const TicketActionButtons = ({ ticket }) => {
 						size="small"
 						variant="contained"
 						color="primary"
-						onClick={e => handleUpdateTicketStatus(e, "closed", user?.id)}
+						onClick={e => handleUpdateTicketStatus(e, "closed", user?.id, "S")}
 					>
 						{i18n.t("messagesList.header.buttons.resolve")}
 					</ButtonWithSpinner>

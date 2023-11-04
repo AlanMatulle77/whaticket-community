@@ -77,12 +77,13 @@ const Login = () => {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlined />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          {i18n.t("login.title")}
-        </Typography>
+        <img
+          src="https://phpugv.pyperbot.com.br/logo2.jpeg"
+          alt="Image from the internet"
+          width="100"
+          height="56"
+          className={classes.imagem}
+        />
         <form className={classes.form} noValidate onSubmit={handlSubmit}>
           <TextField
             variant="outlined"
@@ -131,18 +132,6 @@ const Login = () => {
           >
             {i18n.t("login.buttons.submit")}
           </Button>
-          <Grid container>
-            <Grid item>
-              <Link
-                href="#"
-                variant="body2"
-                component={RouterLink}
-                to="/signup"
-              >
-                {i18n.t("login.buttons.register")}
-              </Link>
-            </Grid>
-          </Grid>
         </form>
       </div>
       <Box mt={8}>{/* <Copyright /> */}</Box>
